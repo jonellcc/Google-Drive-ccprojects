@@ -10,7 +10,7 @@ const upload = multer({ dest: 'uploads/' });
 
 app.use(express.static('public'));
 
-const credentials = require('process.env.KEY');
+const credentials = require(process.env.KEY);
 const libraryPath = path.join(__dirname, 'library.json');
 
 async function uploadFileToDrive(fileName) {
